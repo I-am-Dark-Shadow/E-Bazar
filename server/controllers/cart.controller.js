@@ -1,4 +1,4 @@
-import CartProductModel from "../models/CartProduct.model.js";
+import CartProductModel from "../models/cartproduct.model.js";
 import UserModel from "../models/user.model.js";
 
 
