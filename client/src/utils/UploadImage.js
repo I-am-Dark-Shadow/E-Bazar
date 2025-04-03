@@ -1,5 +1,5 @@
 import SummaryApi from "../common/SummaryApi"
-import Axios from "../utils/axios"
+import Axios from "../utils/Axios"
 
 // for uploading image anywhere
 const uploadImage = async (iamge) => {
