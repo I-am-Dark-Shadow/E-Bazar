@@ -217,10 +217,6 @@ const ProductListPage = () => {
         </div>
       </section>
     </>
-
-        </div>
-      </section>
-    </>
   )
 }
 
