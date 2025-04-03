@@ -1,4 +1,4 @@
-import Axios from "../utils/axios.js";
+import Axios from "../utils/Axios";
 import SummaryApi from "../common/SummaryApi.js";
 
 
