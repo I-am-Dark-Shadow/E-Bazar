@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Port+Lligat+Sans&display=swap');
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  @apply bg-white;
+}
+
+/* all fonts */
+.caveat {
+  font-family: "Caveat", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kode_mono {
+  font-family: "Kode Mono", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.kode_mono_bold {
+  font-family: "Kode Mono", serif;
+  font-weight: 1000;
+  font-style: normal;
+}
+
+.oooh_baby_regular {
+  font-family: "Oooh Baby", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.press_start_2p_regular {
+  font-family: "Press Start 2P", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.port_lligat_sans_regular {
+  font-family: "Port Lligat Sans", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@layer utilities {
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #fef3c7;
+    /* Light yellow */
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #facc15;
+    /* Yellow */
+    border-radius: 10px;
+    border: 2px solid #fef3c7;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #eab308;
+    /* Darker yellow on hover */
+  }
+
+
+
+  /* custom scrollbar green */
+  .custom-scrollbar-green::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  .custom-scrollbar-green::-webkit-scrollbar-track {
+    background: #cbfec7;
+    /* Light yellow */
+    border-radius: 0px;
+  }
+
+  .custom-scrollbar-green::-webkit-scrollbar-thumb {
+    background: #5eee59;
+    /* Yellow */
+    border-radius: 0px;
+    border: 0px solid #d2fec7;
+  }
+
+  .custom-scrollbar-green::-webkit-scrollbar-thumb:hover {
+    background: #0acc04;
+    /* Darker yellow on hover */
+  }
+
+  /* hide scrollbar */
+  .custom-scrollbar-hidden {
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .custom-scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+  }
+
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar-green-thin::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar-green-thin::-webkit-scrollbar-track {
+  background: #16e7dd21;
+  /* Gradient effect */
+}
+.custom-scrollbar-green-thin::-webkit-scrollbar-thumb {
+  background: #75ffdda1;
+  /* Gradient effect */
+  border-radius: 4px;
+}
+
+.scrollbar-design-blue::-webkit-scrollbar {
+  width: 8px;
+  /* Thin scrollbar */
+}
+
+.scrollbar-design-blue::-webkit-scrollbar-track {
+  background: hide;
+  /* Light background */
+}
+
+.scrollbar-design-blue::-webkit-scrollbar-thumb {
+  background: #90a9f5;
+  /* Gradient effect */
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  cursor: pointer;
+}
+
+/* Scrollbar Styling for WebKit Browsers (Chrome, Safari, Edge) */
+.scrollbar-design::-webkit-scrollbar {
+  width: 8px;
+  /* Thin scrollbar */
+}
+
+.scrollbar-design::-webkit-scrollbar-track {
+  background: hide;
+  /* Light background */
+}
+
+.scrollbar-design::-webkit-scrollbar-thumb {
+  background: #91ff757e;
+  /* Gradient effect */
+  border-radius: 10px;
+  cursor: pointer;
+}
