@@ -118,7 +118,7 @@ const ProductListPage = () => {
       <section className="sticky top-24 lg:top-20">
         <div className="container sticky top-24 mx-auto grid grid-cols-[130px,1fr] md:grid-cols-[200px,1fr] lg:grid-cols-[280px,1fr] lg:px-6 px-4 gap-4">
           {/* Left Side Sub Category */}
-          <div className="min-h-[79vh] max-h-[79vh] overflow-y-scroll py-4 lg:grid lg:grid-cols-1 gap-2 scrollbar-none lg:mx-5" ref={containerRef}>
+          <div className="min-h-[75vh] max-h-[75vh] overflow-y-scroll py-4 lg:grid lg:grid-cols-1 gap-2 scrollbar-none lg:mx-5" ref={containerRef}>
             <div className="bg-green-50 shadow-md rounded-md p-3 h-fit lg:mb-0 mb-4">
               <h3 className="lg:text-2xl text-sm kode_mono_bold uppercase">
                 Sub Category
