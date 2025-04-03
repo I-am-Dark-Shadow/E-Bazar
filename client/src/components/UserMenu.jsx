@@ -91,11 +91,11 @@ const UserMenu = ({ close }) => {
                         )
                     }
 
-                    <h1 className="my-1 text-center text-xl font-bold press_start_2p_regular leading-8 text-gray-900">{user.name}</h1>
+                    <h1 className="my-1 text-center lg:text-xl text-lg font-bold press_start_2p_regular leading-8 text-gray-900">{user.name}</h1>
 
-                    <h3 className="font-lg font-semibold kode_mono text-center leading-6 text-gray-600">{user.email}</h3>
+                    <h3 className="lg:text-base text-xs font-semibold kode_mono text-center leading-6 text-gray-600">{user.email}</h3>
 
-                    <p className="text-center text-sm leading-6 text-gray-500 hover:text-gray-600"><span className="font-semibold text-gray-600">Mobile No :</span> {user.mobile}</p>
+                    <p className="text-center lg:text-sm text-xs leading-6 text-gray-500 hover:text-gray-600"><span className="font-semibold text-gray-600">Mobile No :</span> {user.mobile}</p>
 
                     <p className="text-center text-sm leading-6 text-gray-500 hover:text-blue-900">
                         <Link onClick={handleClose} to={"/dashboard/profile"} className="font-semibold items-center flex justify-center gap-1">{user.role} <HiExternalLink /> </Link>
@@ -104,7 +104,7 @@ const UserMenu = ({ close }) => {
                     {/* <p className="text-center text-sm leading-6 text-gray-500 hover:text-gray-600">{user.last_login_date}</p> */}
 
                     <div className="flex items-center p-4">
-                        <Link onClick={handleClose} to={"/dashboard/myorders"} className="flex items-center gap-1 hover:text-blue-700 font-semibold ">Recent Order <HiExternalLink /></Link>
+                        <Link onClick={handleClose} to={"/dashboard/myorders"} className="flex items-center gap-1 hover:text-blue-700 font-semibold lg:text-base text-sm ">Recent Order <HiExternalLink /></Link>
                         <button onClick={handleLogout} className="ml-auto">
                             <span className="rounded-md bg-red-200 py-1 p-2 text-xs font-medium text-red-700 hover:bg-red-300">Logout</span>
                         </button>
@@ -115,12 +115,12 @@ const UserMenu = ({ close }) => {
                             user.role === "ADMIN" ? (
                                 <>
                                     <li className="flex items-center py-3 text-sm">
-                                        <Link onClick={handleClose} to={"/dashboard/category"} className="font-semibold hover:text-green-600  flex items-center gap-1">1. Category <HiExternalLink /> </Link>
-                                        <Link onClick={handleClose} to={"/dashboard/subcategory"} className="ml-auto font-semibold hover:text-amber-600  flex items-center gap-1">2. Sub Category <HiExternalLink /> </Link>
+                                        <Link onClick={handleClose} to={"/dashboard/category"} className="font-semibold hover:text-green-600  flex items-center gap-1 lg:text-sm text-xs">1. Category <HiExternalLink /> </Link>
+                                        <Link onClick={handleClose} to={"/dashboard/subcategory"} className="ml-auto font-semibold hover:text-amber-600  flex items-center gap-1 lg:text-sm text-xs">2. Sub Category <HiExternalLink /> </Link>
                                     </li>
                                     <li className="flex items-center py-3 text-sm">
-                                        <Link onClick={handleClose} to={"/dashboard/uploadproduct"} className="font-semibold hover:text-violet-600  flex items-center gap-1">3. Upload Product <HiExternalLink /> </Link>
-                                        <Link onClick={handleClose} to={"/dashboard/products"} className="ml-auto font-semibold hover:text-pink-600  flex items-center gap-1">4. Products <HiExternalLink /> </Link>
+                                        <Link onClick={handleClose} to={"/dashboard/uploadproduct"} className="font-semibold hover:text-violet-600  flex items-center gap-1 lg:text-sm text-xs">3. Upload Product <HiExternalLink /> </Link>
+                                        <Link onClick={handleClose} to={"/dashboard/products"} className="ml-auto font-semibold hover:text-pink-600  flex items-center gap-1 lg:text-sm text-xs">4. Products <HiExternalLink /> </Link>
                                     </li>
                                 </>
                             ) : (
@@ -134,13 +134,13 @@ const UserMenu = ({ close }) => {
                         }
 
                         <li className="flex items-center py-3 text-sm">
-                            <Link onClick={handleClose} to={"/dashboard/address"} className="font-semibold hover:text-blue-900 flex items-center gap-1">Save/Add Address <HiExternalLink /> </Link>
+                            <Link onClick={handleClose} to={"/dashboard/address"} className="font-semibold hover:text-blue-900 flex items-center gap-1 lg:text-sm text-xs">Save/Add Address <HiExternalLink /> </Link>
                             {/* <span className="ml-auto truncate max-w-[120px] overflow-hidden whitespace-nowrap">{user.address_details}</span> */}
                         </li>
                         <li className="flex items-center py-3 text-sm">
-                            <Link onClick={handleClose} to={"/dashboard/ordershistory"} className="font-semibold hover:text-blue-900 flex items-center gap-1">Order History <HiExternalLink /></Link>
+                            <Link onClick={handleClose} to={"/dashboard/ordershistory"} className="font-semibold hover:text-blue-900 flex items-center gap-1 lg:text-sm text-xs">Order History <HiExternalLink /></Link>
                             <Link onClick={handleClose} to={"/dashboard/editprofile"} className="ml-auto">
-                                <span className="rounded-full bg-cyan-200 hover:bg-cyan-300 py-1 px-2 text-xs font-medium text-green-700">Edit Profile</span>
+                                <span className="rounded-full bg-cyan-200 hover:bg-cyan-300 py-1 px-2 text-xs font-medium text-green-700 ">Edit Profile</span>
                             </Link>
                         </li>
 
