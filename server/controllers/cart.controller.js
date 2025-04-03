@@ -1,4 +1,4 @@
-import CartProductModel from "../models/cartProduct.model.js";
+import CartProduct from "../models/cartProduct.model.js";
 import UserModel from "../models/user.model.js";
 
 
@@ -19,7 +19,7 @@ export const addToCartItemController = async (req, res) => {
         }
 
         // check the cart item is exist or not
-        const checkItemCart = await CartProductModel.findOne({
+        const checkItemCart = await CartProduct.findOne({
             userId: userId,
             productId: productId
         })
@@ -33,7 +33,7 @@ export const addToCartItemController = async (req, res) => {
             })
         }
 
-        const cartItem = await CartProductModel({
+        const cartItem = await CartProduct({
             quantity: 1,
             userId: userId,
             productId: productId
@@ -71,7 +71,7 @@ export const getCartItemController = async (req, res) => {
         // get the user id from middleware auth.js for only logged in user can get the details
 
         // it is for getting the cart item from the database in cartProduct collection
-        const cartItem = await CartProductModel.find({
+        const cartItem = await CartProduct.find({
             userId: userId
         }).populate("productId");
 
@@ -107,7 +107,7 @@ export const updateCartItemQtyController = async (req, res) => {
         }
 
         // it is for getting the cart item from the database in cartProduct collection
-        const updateCartItem = await CartProductModel.updateOne({
+        const updateCartItem = await CartProduct.updateOne({
             _id: _id,
             userId: userId
         },{
@@ -147,7 +147,7 @@ export const deleteCartItemController = async (req, res) => {
         }
 
         // it is for getting the cart item from the database in cartProduct collection
-        const deleteCartItem = await CartProductModel.deleteOne({
+        const deleteCartItem = await CartProduct.deleteOne({
             _id: _id,
             userId: userId
         })
