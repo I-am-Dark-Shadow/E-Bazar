@@ -1,4 +1,4 @@
-import CartProduct from "../models/cartProduct.model.js";
+import CartProductModel from "../models/CartProduct.model.js";
 import UserModel from "../models/user.model.js";
 
 
@@ -19,7 +19,7 @@ export const addToCartItemController = async (req, res) => {
         }
 
         // check the cart item is exist or not
-        const checkItemCart = await CartProduct.findOne({
+        const checkItemCart = await CartProductModel.findOne({
             userId: userId,
             productId: productId
         })
@@ -33,13 +33,13 @@ export const addToCartItemController = async (req, res) => {
             })
         }
 
-        const cartItem = await CartProduct({
+        const cartItem = await CartProductModel({
             quantity: 1,
             userId: userId,
             productId: productId
         })
 
-        // it is for saving the cart item in the database in cartProduct collection
+        // it is for saving the cart item in the database in CartProductModel collection
         const save = await cartItem.save();
 
 
@@ -70,8 +70,8 @@ export const getCartItemController = async (req, res) => {
         const userId = req.userId;
         // get the user id from middleware auth.js for only logged in user can get the details
 
-        // it is for getting the cart item from the database in cartProduct collection
-        const cartItem = await CartProduct.find({
+        // it is for getting the cart item from the database in CartProductModel collection
+        const cartItem = await CartProductModel.find({
             userId: userId
         }).populate("productId");
 
@@ -106,8 +106,8 @@ export const updateCartItemQtyController = async (req, res) => {
             })
         }
 
-        // it is for getting the cart item from the database in cartProduct collection
-        const updateCartItem = await CartProduct.updateOne({
+        // it is for getting the cart item from the database in CartProductModel collection
+        const updateCartItem = await CartProductModel.updateOne({
             _id: _id,
             userId: userId
         },{
@@ -146,8 +146,8 @@ export const deleteCartItemController = async (req, res) => {
             })
         }
 
-        // it is for getting the cart item from the database in cartProduct collection
-        const deleteCartItem = await CartProduct.deleteOne({
+        // it is for getting the cart item from the database in CartProductModel collection
+        const deleteCartItem = await CartProductModel.deleteOne({
             _id: _id,
             userId: userId
         })
