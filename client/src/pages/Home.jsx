@@ -74,7 +74,7 @@ const Home = () => {
                   <div
                     key={cat?._id + "displaycategory"}
                     onClick={() => handleRedirectProductListPage(cat?._id, cat?.name)}
-                    className=" my-2 bg-white p-1 rounded-lg min-h-36 grid gap-2 shadow cursor-pointer hover:scale-110 hover:transform-cpu transition-all duration-300">
+                    className=" my-2 bg-white p-1 rounded-lg min-h-36 grid gap-2 shadow cursor-pointer hover:scale-110 hover:transform-cpu transition-all duration-300 border-2 border-gray-200 lg:border-none">
                     <div className="bg-white min-h-32 rounded">
                       <div className="flex flex-col items-center justify-center text-center">
                         <img
