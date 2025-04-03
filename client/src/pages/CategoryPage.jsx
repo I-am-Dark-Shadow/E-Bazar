@@ -97,11 +97,11 @@ const CategoryPage = () => {
                         )
                     }
 
-                    <div className="p-4 grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-5">
+                    <div className="lg:p-4 grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-5">
                         {
                             categoryData.map((category, index) => {
                                 return (
-                                    <div key={category._id || `category-${index}`} className="w-22 lg:w-34 group  bg-white border-2 border-white rounded-lg shadow-lg hover:shadow-lg cursor-pointer hover:border-[4px] hover:border-yellow-200">
+                                    <div key={category._id || `category-${index}`} className="w-22 lg:w-34 group  bg-white lg:border-2 lg:border-white border-2 border-gray-200 rounded-lg shadow-lg hover:shadow-lg cursor-pointer hover:border-[4px] hover:border-yellow-200">
                                         <div className="flex flex-col items-center justify-center text-center">
                                             <img
                                                 src={category.image}
@@ -109,9 +109,9 @@ const CategoryPage = () => {
                                                 className="w-full object-scale-down rounded-lg"
                                             />
 
-                                            <p className="font-mono text-gray-800 font-semibold py-2 lg:p-2 text-base text-ellipsis line-clamp-3">{category.name}</p>
+                                            <p className="font-mono text-gray-800 font-semibold py-2 px-2 lg:p-2 lg:text-base text-sm ">{category.name}</p>
                                         </div>
-                                        <div className="mt-[-10px] text-sm lg:text-md p-2 items-center justify-between flex-row hidden group-hover:flex">
+                                        <div className="mt-[-10px] lg:text-sm text-xs p-2 items-center justify-between flex-row hidden group-hover:flex">
                                             <button
                                                 onClick={() => {
                                                     setOpenEdit(true),
