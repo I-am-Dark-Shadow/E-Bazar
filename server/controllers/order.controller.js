@@ -1,4 +1,4 @@
-import CartProductModel from "../models/cart.model.js";
+import CartProductModel from "../models/cartProduct.model.js";
 import OrderModel from "../models/order.model.js";
 
 // for creating orderid
