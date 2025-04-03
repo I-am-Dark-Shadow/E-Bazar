@@ -116,18 +116,18 @@ const ProductListPage = () => {
   return (
     <>
       <section className="sticky top-24 lg:top-20">
-        <div className="container sticky top-24 mx-auto grid grid-cols-[80px,1fr] md:grid-cols-[200px,1fr] lg:grid-cols-[280px,1fr] lg:px-6 px-4 gap-4">
+        <div className="container sticky top-24 mx-auto grid grid-cols-[130px,1fr] md:grid-cols-[200px,1fr] lg:grid-cols-[280px,1fr] lg:px-6 px-4 gap-4">
           {/* Left Side Sub Category */}
           <div className="min-h-[79vh] max-h-[79vh] overflow-y-scroll py-4 lg:grid lg:grid-cols-1 gap-2 scrollbar-none lg:mx-5" ref={containerRef}>
-            <div className="hidden lg:block bg-green-50 shadow-md rounded-md p-3 h-fit">
-              <h3 className="text-2xl kode_mono_bold uppercase">
+            <div className="bg-green-50 shadow-md rounded-md p-3 h-fit lg:mb-0 mb-4">
+              <h3 className="lg:text-2xl text-sm kode_mono_bold uppercase">
                 Sub Category
               </h3>
             </div>
 
             {AllSubCategory.length > 2 && (
               <>
-                <div className="hidden lg:flex flex-col items-center fixed space-y-4 ml-[248px]">
+                <div className="hidden lg:flex flex-col items-center fixed space-y-4 ml-[248px] ">
                   <button
                     onClick={handleScrollUp}
                     className="bg-yellow-200 text-white hover:text-green-300 p-2 rounded-full shadow-lg border-[3px] border-green-200 hover:bg-amber-200 hover:border-green-200 transition-all"
@@ -164,11 +164,11 @@ const ProductListPage = () => {
                       <img
                         src={sub.image}
                         alt={sub.name}
-                        className="w-[50px] h-[50px] lg:w-24 lg:h-auto object-contain mt-2"
+                        className="w-[80px] h-[80px] lg:w-24 lg:h-auto object-scale-down mt-2"
                       />
                     </div>
                     <div className="text-center">
-                      <p className="font-semibold text-xs lg:text-xl text-center font-mono lg:mt-auto mb-1 text-ellipsis line-clamp-2">{sub.name}</p>
+                      <p className="font-semibold text-sm lg:text-xl text-center font-mono lg:mt-auto mb-1 text-ellipsis line-clamp-2">{sub.name}</p>
                     </div>
                   </Link>
 
@@ -182,19 +182,24 @@ const ProductListPage = () => {
 
           {/* Right Side Product */}
           <>
-            <div className=" py-6 lg:ml-6">
+            <div className=" py-4 lg:py-6 lg:ml-6">
               <div className="hidden lg:block text-xs bg-white text-white select-none -mt-6">.</div>
-              <div className="bg-yellow-50 shadow-md p-3 kode_mono_bold lg:text-2xl uppercase rounded-sm">
+              <div className="bg-yellow-50 shadow-md p-3 mb-1 kode_mono_bold lg:text-2xl text-sm uppercase rounded-sm ">
                 <h3 className="">
                   {subCategoryName}
                 </h3>
               </div>
+
               {/* loading */}
               <div className="">
-
-                <div className="min-h-[66vh] max-h-[66vh] overflow-y-scroll lg:scrollbar-design scrollbar-none">
+                {
+                  loading && (
+                    <Loading />
+                  )
+                }
+                <div className="min-h-[66vh] max-h-[66vh] overflow-y-scroll lg:scrollbar-design scrollbar-none lg:border-none border-l-4 border-r-4 border-gray-200 flex justify-center lg:block">
                   {/* all product */}
-                  <div className="gap-3 lg:gap-0 lg:pt-4 mt-3 lg:mt-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                  <div className="gap-3 lg:gap-0 lg:pt-4 mt-3 lg:mt-0 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
                     {
                       productData.map((p, index) => {
                         return (
@@ -205,14 +210,13 @@ const ProductListPage = () => {
                   </div>
                 </div>
 
-                {
-                  loading && (
-                    <Loading />
-                  )
-                }
               </div>
             </div>
           </>
+
+        </div>
+      </section>
+    </>
 
         </div>
       </section>
