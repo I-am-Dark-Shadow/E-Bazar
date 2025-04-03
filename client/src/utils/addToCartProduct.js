@@ -1,7 +1,7 @@
 import toast from "react-hot-toast"
-import SummaryApi from "../common/SummaryApi"
+import SummaryApi from "../common/SummaryApi.js"
 import Axios from "./Axios"
-import AxiosToastError from "./AxiosToastError"
+import AxiosToastError from "./AxiosToastError.js"
 
 export const addToCartProduct = async(productId,qty)=>{
     try {
