@@ -79,7 +79,7 @@ const ForgotPasswordPage = () => {
         <div className="bg-white my-4 w-full max-w-lg mx-auto rounded p-8 mb-5">
           <p className="lg:text-2xl text-xl font-semibold text-center text-green-500 bg-cyan-100 rounded p-2">Forgot Password</p>
 
-          <form action="" className="grid gap-4 py-4 mt-6" onSubmit={handleSubmit}>
+          <form action="" className="gap-4 py-4 mt-6 flex flex-col justify-center" onSubmit={handleSubmit}>
 
             <div className="flex flex-col justify-center gap-1">
               {/* htmlFor mean label for input */}
