@@ -74,7 +74,7 @@ const SearchPage = () => {
   return (
     <>
       <section className='bg-white'>
-        <div className='container mx-auto p-8'>
+        <div className='container mx-auto p-4 -mt-4'>
           <p className='font-semibold font-mono text-2xl uppercase'>Search Results: {data.length}  </p>
 
           <InfiniteScroll
@@ -82,7 +82,7 @@ const SearchPage = () => {
             hasMore={true}
             next={handleFetchMore}
           >
-            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 py-4 gap-4 mx-5'>
+            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 py-4 gap-2 mx-auto'>
               {
                 data.map((p, index) => {
                   return (
