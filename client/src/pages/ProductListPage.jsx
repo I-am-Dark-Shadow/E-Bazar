@@ -193,22 +193,23 @@ const ProductListPage = () => {
               {/* loading */}
               <div className="">
                 {
-                  loading && (
+                  loading ? (
                     <Loading />
+                  ) : (
+                    <div className="min-h-[63vh] max-h-[63vh] overflow-y-scroll lg:scrollbar-design scrollbar-none lg:border-none border-l-4 border-r-4 border-gray-200 flex justify-center lg:block">
+                      {/* all product */}
+                      <div className="gap-3 lg:gap-0 lg:pt-4 mt-3 lg:mt-0 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
+                        {
+                          productData.map((p, index) => {
+                            return (
+                              <CardProduct data={p} key={p._id + "productSubCategory" + index} />
+                            )
+                          })
+                        }
+                      </div>
+                    </div>
                   )
                 }
-                <div className="min-h-[63vh] max-h-[63vh] overflow-y-scroll lg:scrollbar-design scrollbar-none lg:border-none border-l-4 border-r-4 border-gray-200 flex justify-center lg:block">
-                  {/* all product */}
-                  <div className="gap-3 lg:gap-0 lg:pt-4 mt-3 lg:mt-0 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
-                    {
-                      productData.map((p, index) => {
-                        return (
-                          <CardProduct data={p} key={p._id + "productSubCategory" + index} />
-                        )
-                      })
-                    }
-                  </div>
-                </div>
 
               </div>
             </div>
