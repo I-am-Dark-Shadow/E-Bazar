@@ -94,7 +94,7 @@ const RegisterPage = () => {
                             {/* htmlFor mean label for input */}
                             <label htmlFor="name" className="cursor-pointer font-semibold">Name :</label>
                             <input
-                                className="bg-blue-50 p-2 cursor-pointer border rounded outline-none focus:border-primary-200"
+                                className="bg-blue-50 p-2 cursor-pointer border rounded flex items-center focus-within:border-primary-200"
                                 type="text"
                                 id="name"
                                 autoFocus
@@ -109,7 +109,7 @@ const RegisterPage = () => {
                             {/* htmlFor mean label for input */}
                             <label htmlFor="email" className="cursor-pointer font-semibold">Email :</label>
                             <input
-                                className="bg-blue-50 p-2 cursor-pointer border rounded outline-none focus:border-primary-200"
+                                className="bg-blue-50 p-2 cursor-pointer border rounded flex items-center focus-within:border-primary-200"
                                 type="email"
                                 id="email"
                                 value={data.email}
