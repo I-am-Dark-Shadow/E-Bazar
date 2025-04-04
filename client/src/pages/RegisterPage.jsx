@@ -84,17 +84,17 @@ const RegisterPage = () => {
     }
 
     return (
-       <>
+      <>
             <section className="w-full container mx-auto flex px-2 justify-center">
                 <div className="bg-white my-4 w-full max-w-sm lg:max-w-lg mx-auto rounded py-4 px-6 mb-5">
                     <p className="lg:text-2xl text-xl font-semibold text-center text-green-500 bg-cyan-100 rounded p-2">Wellcome To E-Bazar</p>
 
                     <form action="" className="gap-4 mt-6 flex flex-col justify-center" onSubmit={handleSubmit}>
-                        <div className="grid gap-1">
+                        <div className="flex flex-col justify-center gap-1 ">
                             {/* htmlFor mean label for input */}
                             <label htmlFor="name" className="cursor-pointer font-semibold">Name :</label>
                             <input
-                                className="bg-blue-50 p-2 cursor-pointer border rounded flex justify-center items-center outline-none focus:border-primary-200"
+                                className="bg-blue-50 p-2 cursor-pointer border rounded flex items-center outline-none focus:border-primary-200"
                                 type="text"
                                 id="name"
                                 autoFocus
@@ -109,7 +109,7 @@ const RegisterPage = () => {
                             {/* htmlFor mean label for input */}
                             <label htmlFor="email" className="cursor-pointer font-semibold">Email :</label>
                             <input
-                                className="bg-blue-50 p-2 cursor-pointer border rounded flex justify-center items-center outline-none focus:border-primary-200"
+                                className="bg-blue-50 p-2 cursor-pointer border rounded flex items-center outline-none focus:border-primary-200"
                                 type="email"
                                 id="email"
                                 value={data.email}
