@@ -105,7 +105,7 @@ const RegisterPage = () => {
                             />
                         </div>
 
-                        <div className="grid gap-1">
+                        <div className="flex flex-col justify-center gap-1">
                             {/* htmlFor mean label for input */}
                             <label htmlFor="email" className="cursor-pointer font-semibold">Email :</label>
                             <input
