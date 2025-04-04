@@ -74,7 +74,7 @@ const SearchPage = () => {
   return (
     <>
       <section className='bg-white'>
-        <div className='container mx-auto p-4 -mt-4'>
+        <div className='container mx-auto p-6 -mt-4'>
           <p className='font-semibold font-mono text-2xl uppercase'>Search Results: {data.length}  </p>
 
           <InfiniteScroll
