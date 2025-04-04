@@ -115,10 +115,10 @@ const ProductListPage = () => {
 
   return (
     <>
-      <section className="sticky top-24 lg:top-20">
+      <section className="sticky top-24 lg:top-20 -mt-10">
         <div className="container sticky top-24 mx-auto grid grid-cols-[130px,1fr] md:grid-cols-[200px,1fr] lg:grid-cols-[280px,1fr] lg:px-6 px-4 gap-4">
           {/* Left Side Sub Category */}
-          <div className="min-h-[80vh] max-h-[80vh] overflow-y-scroll py-4 lg:grid lg:grid-cols-1 gap-2 scrollbar-none lg:mx-5" ref={containerRef}>
+          <div className="min-h-[72vh] max-h-[72vh] overflow-y-scroll py-4 lg:grid lg:grid-cols-1 gap-2 scrollbar-none lg:mx-5" ref={containerRef}>
             <div className="bg-green-50 shadow-md rounded-md p-3 h-fit lg:mb-0 mb-4">
               <h3 className="lg:text-2xl text-sm kode_mono_bold uppercase">
                 Sub Category
@@ -197,7 +197,7 @@ const ProductListPage = () => {
                     <Loading />
                   )
                 }
-                <div className="min-h-[72vh] max-h-[72vh] overflow-y-scroll lg:scrollbar-design scrollbar-none lg:border-none border-l-4 border-r-4 border-gray-200 flex justify-center lg:block">
+                <div className="min-h-[63vh] max-h-[63vh] overflow-y-scroll lg:scrollbar-design scrollbar-none lg:border-none border-l-4 border-r-4 border-gray-200 flex justify-center lg:block">
                   {/* all product */}
                   <div className="gap-3 lg:gap-0 lg:pt-4 mt-3 lg:mt-0 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
                     {
