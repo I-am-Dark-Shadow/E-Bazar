@@ -82,7 +82,7 @@ const Home = () => {
                           alt={cat?.name}
                           className="w-full h-full object-scale-down"
                         />
-                        <p className="font-mono text-gray-800 lg:font-semibold font-semibold py-2 lg:p-2 lg:text-base text-sm ">{cat?.name}</p>
+                        <p className="font-mono text-gray-800 lg:font-semibold font-bold py-2 lg:p-2 lg:text-base text-sm ">{cat?.name}</p>
                       </div>
                     </div>
                   </div>
