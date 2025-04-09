@@ -76,13 +76,13 @@ const Home = () => {
                     onClick={() => handleRedirectProductListPage(cat?._id, cat?.name)}
                     className=" my-2 bg-white p-1 rounded-lg min-h-36 grid gap-2 shadow cursor-pointer hover:scale-110 hover:transform-cpu transition-all duration-300 border-2 border-gray-200 lg:border-none">
                     <div className="bg-white min-h-32 rounded">
-                      <div className="flex flex-col items-center justify-center text-center">
+                      <div className="flex flex-col items-center justify-center text-center h-full">
                         <img
                           src={cat?.image}
                           alt={cat?.name}
                           className="w-full h-full object-scale-down"
                         />
-                        <p className="font-mono text-gray-800 lg:font-semibold font-bold py-2 lg:p-2 lg:text-base text-sm ">{cat?.name}</p>
+                        <p className="font-mono text-gray-800 lg:font-semibold font-bold py-2 lg:p-2 lg:text-base text-sm text-ellipsis line-clamp-2 mb-1">{cat?.name}</p>
                       </div>
                     </div>
                   </div>
