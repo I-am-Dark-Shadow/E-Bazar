@@ -24,8 +24,8 @@ const MyOrders = () => {
       {latestOrders.length > 0 ? (
         <div className="grid gap-6">
           {latestOrders.map((order, index) => (
-            <div key={index} className="bg-yellow-100 text-gray-800 p-6 rounded-2xl shadow-2xl flex flex-col lg:flex-row gap-6 border-[3.5px] border-dashed border-yellow-500 justify-center items-center lg:justify-normal">
-              <img src={order?.product_details?.image[0] || deliveryChargeImage} alt={order?.product_details?.name} className="lg:w-40 lg:h-40 object-cover rounded-xl w-52 h-52" />
+            <div key={index} className="bg-yellow-100 overflow-hidden text-gray-800 p-6 rounded-2xl shadow-2xl flex flex-col lg:flex-row gap-6 border-[3.5px] border-dashed border-yellow-500 justify-center items-center lg:justify-normal">
+              <img src={order?.product_details?.image[0] || deliveryChargeImage} alt={order?.product_details?.name} className="lg:w-40 lg:h-40 object-cover rounded-xl w-40 h-40" />
               <div className="font-mono">
                 <h2 className="text-2xl font-semibold">{order?.product_details?.name}</h2>
                 <p className="text-gray-600"><span className="font-bold">Order ID:</span> {order?.orderId}</p>
