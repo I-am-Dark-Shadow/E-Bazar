@@ -32,7 +32,7 @@ const CardProduct = ({ data }) => {
           {data?.unit}
         </div>
 
-        <div className="mx-auto font-semibold text-ellipsis font-mono ml-[2px] lg:text-lg text-sm line-clamp-2">
+        <div className="mx-auto lg:font-semibold font-bold text-ellipsis font-mono ml-[2px] lg:text-lg text-sm line-clamp-2">
           {data?.name}
         </div>
 
